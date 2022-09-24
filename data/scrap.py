@@ -1,5 +1,4 @@
-import requests, re, os
-from bs4 import BeautifulSoup
+import requests, re, os, bs4
 
 img,judul,genre,author,chapter,status = [],[],[],[],[],[]
 data = {}
@@ -16,7 +15,7 @@ class Main:
 class serachKomik(Main):
 
     def modol(self,url):
-        r = BeautifulSoup(requests.get(url, headers={"user-agent":"chrome"}).text, "html.parser")
+        r = bs4.BeautifulSoup(requests.get(url, headers={"user-agent":"chrome"}).text, "html.parser")
         #####################################################
         #scraping BeautifulSoup
         for d in r.find_all("div", {"class":"row c-tabs-item__content"}):
