@@ -7,7 +7,7 @@ dj-static==0.0.6
 gunicorn==19.9.0
 Unipath==1.1
 python-decouple==3.1
-Pillow==3.3.0
+Pillow==9.0.1
 Markdown==3.0.1
 bleach==3.1.0
 psycopg2==2.7.7
