@@ -71,7 +71,7 @@ class serachKomik(Main):
         info.update(
             {
                 "data-info":data,
-                "jumlah-hasil-pencarian":len(judul), "test":r
+                "jumlah-hasil-pencarian":len(judul), "test":str(r)
             }
         )
         return info
