@@ -16,7 +16,6 @@ class Main:
 class serachKomik(Main):
 
     def request(self,url):
-        data.clear();img.clear();author.clear();judul.clear();genre.clear();chapter.clear();status.clear()
         r = BeautifulSoup(requests.get(url, headers={"user-agent":"chrome"}).text, "html.parser")
         #####################################################
         #scraping BeautifulSoup
