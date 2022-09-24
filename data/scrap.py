@@ -75,4 +75,4 @@ class serachKomik(Main):
                 "jumlah-hasil-pencarian":len(judul)
             }
         )
-        return {"data":r}
+        return info
