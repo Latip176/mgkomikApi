@@ -23,4 +23,4 @@ def getApi():
         return jsonify({"error":"Pake method get bang jangan method post"})
 
 if __name__=="__main__":
-    app.run()
+    app.run(debug=True)
