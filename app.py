@@ -12,7 +12,7 @@ def getApi():
     if request.method=="GET":
         key = request.args.get("judul")
         if(key):
-            req = serachKomik(key).request("https://mgkomik.com/?s={}&post_type=wp-manga".format(key))
+            req = serachKomik(key).modol("https://mgkomik.com/?s={}&post_type=wp-manga".format(key))
             return jsonify(req)
         else:
             return jsonify({"error":"Search dulu bang, contoh /api/komik/?judul=test"})
