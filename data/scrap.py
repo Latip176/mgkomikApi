@@ -15,7 +15,7 @@ class Main:
 class serachKomik(Main):
 
     def modol(self,url):
-        r = bs4.BeautifulSoup(requests.get(url, headers={"user-agent":"chrome"}).text, "html.parser")
+        r = bs4.BeautifulSoup(requests.get(url, headers={"user-agent":"chrome"}).text, "lxml")
         #####################################################
         #scraping BeautifulSoup
         for d in r.find_all("div", {"class":"row c-tabs-item__content"}):
