@@ -1,8 +1,10 @@
-import requests, re, os, bs4
+import requests, re, os, bs4, cloudscraper
 
 img,judul,genre,author,chapter,status = [],[],[],[],[],[]
 data = {}
 info = {}
+
+scraper = cloudscraper.create_scraper()
 
 class Main:
 
@@ -15,7 +17,7 @@ class Main:
 class serachKomik(Main):
 
     def modol(self,url):
-        r = bs4.BeautifulSoup(requests.get(url, headers={"user-agent":"Mozilla/5.0 (Linux; Android 11; SM-M115F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.40 Mobile Safari/537.36","referer":"https://mgkomik.com/","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","host":"mgkomik.com"}).text, "html.parser")
+        r = bs4.BeautifulSoup(scraper.get(url).text, "html.parser")
         #####################################################
         #scraping BeautifulSoup
         for d in r.find_all("div", {"class":"row c-tabs-item__content"}):
