@@ -4,7 +4,7 @@ img,judul,genre,author,chapter,status = [],[],[],[],[],[]
 data = {}
 info = {}
 
-scraper = cloudscraper.create_scraper()
+scraper = cloudscraper.create_scraper(disableCloudflareV1=True)
 
 class Main:
 
