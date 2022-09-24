@@ -15,7 +15,7 @@ class Main:
 
 class serachKomik(Main):
 
-    def request(self,url):
+    def modol(self,url):
         r = BeautifulSoup(requests.get(url, headers={"user-agent":"chrome"}).text, "html.parser")
         #####################################################
         #scraping BeautifulSoup
