@@ -1,4 +1,4 @@
-import requests as req, re, os
+import requests, re, os
 from bs4 import BeautifulSoup
 
 img,judul,genre,author,chapter,status = [],[],[],[],[],[]
@@ -17,7 +17,7 @@ class serachKomik(Main):
 
     def request(self,url):
         data.clear();img.clear();author.clear();judul.clear();genre.clear();chapter.clear();status.clear()
-        r = BeautifulSoup(req.get(url, headers={"user-agent":"chrome"}).text, "html.parser")
+        r = BeautifulSoup(requests.get(url, headers={"user-agent":"chrome"}).text, "html.parser")
         #####################################################
         #scraping BeautifulSoup
         for d in r.find_all("div", {"class":"row c-tabs-item__content"}):
