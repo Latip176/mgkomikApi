@@ -17,6 +17,7 @@ class Main:
 class serachKomik(Main):
 
     def modol(self,url):
+        data.clear();img.clear();judul.clear();genre.clear();author.clear();chapter.clear();status.clear()
         r = bs4.BeautifulSoup(scraper.get(url).text, "html.parser")
         #####################################################
         #scraping BeautifulSoup
